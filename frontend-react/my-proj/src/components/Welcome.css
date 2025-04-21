@@ -1,0 +1,36 @@
+.welcome {
+    padding: 3px;
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+    background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .quote {
+    font-style: italic;
+    color: #222;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  
+  .quote::before,
+  .quote::after {
+    content: '"';
+    font-size: 2.5rem;
+    color: #ff6f61;
+    position: relative;
+    top: 5px;
+  }
+  
+  .quote:hover {
+    color: #00796b;
+    transform: scale(1.03);
+  }
+  

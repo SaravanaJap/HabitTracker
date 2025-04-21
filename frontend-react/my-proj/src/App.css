@@ -1,0 +1,8 @@
+.react-calendar-heatmap .color-empty {
+    fill: #eeeeee; /* Light gray for no activity */
+  }
+  
+  .react-calendar-heatmap .color-github-4 {
+    fill: #1e6823; /* Dark green for completed days */
+  }
+  

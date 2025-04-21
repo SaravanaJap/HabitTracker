@@ -1,0 +1,123 @@
+section {
+  padding: 10px 20px;
+  background-color: white;
+  max-height: 60vh; 
+  
+}
+
+h2 {
+  margin-bottom: 3px;
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: 500;
+}
+
+h1 {
+  margin-bottom: 3px;
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.habit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  max-width: 280px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #fefaf6, #fefaf6);
+  padding: 2rem;
+  color: #fefefe;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.completed-button {
+  pointer-events: none;
+  opacity: 0.6;
+  background-color: #d3ffd3;
+}
+.skipped{
+  pointer-events: none;
+  opacity: 0.6;
+  background-color: #d3ffd3;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  background-color: #4b030333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  font-size: 1.5rem;
+  color: rgb(236, 4, 4);
+}
+
+.content {
+  margin-left: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: black;
+}
+
+.desc {
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.download,
+.notnow{
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.delete-button{
+  font-size: 1.2rem;
+}
+
+.download {
+  background-color:  #ff6f00
+}
+
+.download:hover {
+  background-color:  #ff6f00
+}
+
+.notnow {
+  background-color: #6b7280;
+}
+
+.notnow:hover {
+  background-color: #4b5563;
+}
