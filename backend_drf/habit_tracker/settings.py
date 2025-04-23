@@ -97,6 +97,9 @@ AUTH_USER_MODEL = 'accounts.Account'
 #     }
 # }
 
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
