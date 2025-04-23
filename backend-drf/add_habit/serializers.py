@@ -12,7 +12,7 @@ class HabitSerializer(serializers.ModelSerializer):
 
 class HabitLogSerializer(serializers.ModelSerializer):
 
-
+    
     class Meta:
         model = HabitLog
         fields = '__all__'
