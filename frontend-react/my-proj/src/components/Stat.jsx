@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import api from '../axiosinstance';
+import api from '../axiosInstance';
 import CalendarHeatmap  from 'react-calendar-heatmap' 
 import 'react-calendar-heatmap/dist/styles.css';
 import '../App.css'

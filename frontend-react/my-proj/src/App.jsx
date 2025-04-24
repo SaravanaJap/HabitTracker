@@ -12,8 +12,9 @@ import Register from './components/Register'
 import Login from './components/Login'
 import LogProvider from './LogProvider'
 import PrivateRoute from './PrivateRoute'
+import  Stat  from './components/Stat';
 
-import Stat from './components/stat'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -35,7 +36,7 @@ function App() {
         }/>
         <Route path='/Register' element = {<Register />} /> 
         <Route path='/Login' element = {<Login />} /> 
-        <Route path='/stat' element = { <PrivateRoute><Stat /></PrivateRoute> } /> 
+        <Route path='/stat' element = { <PrivateRoute><Stat  /></PrivateRoute> } /> 
         <Route path='/add_habit' element = { <PrivateRoute><Habitform /></PrivateRoute> } /> 
       </Routes>
     </BrowserRouter>
