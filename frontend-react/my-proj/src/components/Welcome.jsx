@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Welcome.css';
 import './Section.jsx';
 import { LogContext } from '../LogProvider.jsx';
-import api from '../axiosinstance.jsx';
+import api from '../axiosInstance.jsx';
 
 const Welcome = () => {
   const [quote, setQuote] = useState('');
