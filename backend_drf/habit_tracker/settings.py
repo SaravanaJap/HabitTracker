@@ -146,6 +146,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5174',
+    'https://habittracker-2-cis1.onrender.com'
 ]
 
 
