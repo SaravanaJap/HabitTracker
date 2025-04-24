@@ -23,20 +23,25 @@ const Login =  () => {
   
       try {
         const response = await api.post('/token/', userData);
-        
+      
         if (response.status === 200) {
           localStorage.setItem('accessToken', response.data.access);
           localStorage.setItem('refreshToken', response.data.refresh);
-          console.log('Login successful');
+          console.log('login successful');
           setIsLoggedIn(true);
+          setLoading(true);  // ← fixed the `True` typo
           navigate('/');
         } else {
-          setError('Unexpected response from server');
+          console.error('Unexpected status:', response.status);
+          setError('Unexpected error during login');
         }
       } catch (error) {
         console.error('Login failed:', error.response?.status, error.response?.data);
         setError('Invalid credentials');
+      } finally {
+        setLoading(false);
       }
+      
       
   
 
