@@ -21,21 +21,23 @@ const Login =  () => {
         email,password
       }
   
-      try{
-        const response = await api.post('/token/',userData)
-        localStorage.setItem('accessToken',response.data.access)
-        localStorage.setItem('refreshToken',response.data.refresh)
-        console.log('login successful')
-        setIsLoggedIn(true)
-        setLoading(True)
-        navigate('/')
-      }catch(error){
-        console.error('Invalid credentials')
-        setError('Invalid credentials')
-      }finally{
-        setLoading(false)
+      try {
+        const response = await api.post('/token/', userData);
+        
+        if (response.status === 200) {
+          localStorage.setItem('accessToken', response.data.access);
+          localStorage.setItem('refreshToken', response.data.refresh);
+          console.log('Login successful');
+          setIsLoggedIn(true);
+          navigate('/');
+        } else {
+          setError('Unexpected response from server');
+        }
+      } catch (error) {
+        console.error('Login failed:', error.response?.status, error.response?.data);
+        setError('Invalid credentials');
       }
-    }
+      
   
 
   return (
