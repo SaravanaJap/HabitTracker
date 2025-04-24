@@ -23,24 +23,28 @@ const Login =  () => {
   
       try {
         const response = await api.post('/token/', userData);
+        console.log('✅ API Response:', response);
       
-        if (response.status === 200) {
-          localStorage.setItem('accessToken', response.data.access);
-          localStorage.setItem('refreshToken', response.data.refresh);
-          console.log('login successful');
-          setIsLoggedIn(true);
-          setLoading(true);  // ← fixed the `True` typo
-          navigate('/');
-        } else {
-          console.error('Unexpected status:', response.status);
-          setError('Unexpected error during login');
+        const access = response.data.access;
+        const refresh = response.data.refresh;
+      
+        if (!access || !refresh) {
+          throw new Error('Tokens missing from response');
         }
+      
+        localStorage.setItem('accessToken', access);
+        localStorage.setItem('refreshToken', refresh);
+        console.log('🎉 Tokens stored.');
+      
+        setIsLoggedIn(true);
+        navigate('/');
       } catch (error) {
-        console.error('Login failed:', error.response?.status, error.response?.data);
+        console.error('🔥 Login failed:', error.response?.data || error.message);
         setError('Invalid credentials');
       } finally {
         setLoading(false);
       }
+      
       
       
   
