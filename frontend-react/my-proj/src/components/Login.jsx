@@ -3,7 +3,7 @@ import './Login.css';
 import React, { useState,useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LogContext } from '../LogProvider';
-import api from '../axiosinstance';
+import api from '../axiosInstance';
 
 
 const Login =  () => {

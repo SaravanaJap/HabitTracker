@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { redirect } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import api from '../axiosinstance';
+import api from '../axiosInstance';
 
 const AddHabit = () => {
   const [habit_name, setHabit_name] = useState('')

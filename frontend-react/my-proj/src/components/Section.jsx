@@ -2,7 +2,7 @@ import React from 'react'
 import './Section.css';
 import { useEffect ,useState} from 'react';
 import axios  from 'axios';
-import api from '../axiosinstance';
+import api from '../axiosInstance';
 const Main = () => {
     const [habits, setHabits] = useState([]);
     const [habitslog,setHabitslog] = useState([]) 
